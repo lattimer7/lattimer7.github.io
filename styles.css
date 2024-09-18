@@ -1,0 +1,193 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fonts */
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 1.5rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #007BFF;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-top: 60px; /* Adjust for fixed nav */
+  }
+  
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-section .btn {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+  }
+  
+  .hero-section .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Content Sections */
+  .content {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  
+  .content h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .content ul {
+    list-style: disc; /* or circle, square, etc. */
+    margin-left: 20px; /* Optional: add margin for better alignment */
+  }
+  
+  .content ul li {
+    margin-bottom: 1rem;
+  }
+  
+  .content ul li strong {
+    display: block;
+  }
+  
+  .publications-list li {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Profile Picture */
+  .profile-picture {
+    display: block;
+    max-width: 200px;
+    margin: 1rem auto;
+    border-radius: 50%;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      display: none;
+      background-color: #ffffff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      border-left: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+    }
+    
+    nav ul.show {
+      display: flex;
+    }
+    
+    nav ul li {
+      margin: 1rem 0;
+    }
+    
+    nav .menu-toggle {
+      display: block;
+      cursor: pointer;
+    }
+    
+    /* Adjust hero section margin for mobile */
+    .hero-section {
+      margin-top: 60px;
+    }
+  }
+  
+  /* Menu Toggle Button (for mobile) */
+  nav .menu-toggle {
+    display: none;
+  }
+  
+  /* Hide the menu toggle icon initially */
+  @media (max-width: 768px) {
+    nav .menu-toggle {
+      display: block;
+    }
+    
+    nav ul {
+      display: none;
+    }
+  }
